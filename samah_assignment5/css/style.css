@@ -1,0 +1,41 @@
+body {
+    background-color: #ede3ff;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position:fixed;
+    bottom: 0;
+    padding: 1px 0px;
+    background-color: rgba(0, 0, 0, 0.187);
+    color: #038579;
+    font-weight: bold;
+}
+
+marquee {
+    color: #a06883;
+}
+
+.brown-txt, figcaption {
+    color: rgb(95, 55, 12);
+}
+
+.leave-txt-color{
+    color: #038579;
+}
+
+.center {
+    text-align: center;
+}
+
+.about-article {
+ width: 80%;
+ margin: auto;
+ margin-top: 2%;
+}
+
+.bg-color {
+    background-color: rgba(0, 0, 0, 0.187);
+}

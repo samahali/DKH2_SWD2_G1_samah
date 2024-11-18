@@ -1,0 +1,21 @@
+body {
+    background-image: url("../images/pink-flower.png");
+    background-size: 100% 100%;
+}
+.brown-txt {
+    color: rgb(95, 55, 12);
+}
+fieldset {
+    border: 1px solid #ff51f6;
+    color: rgb(6, 95, 6);
+    border-radius: 10px;
+}
+input[type=submit]{
+    border: none;
+    border-radius: 5px;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);;
+    background-color: #f592f0;
+    color: green;
+    width: 30%;
+    cursor: pointer;
+}
