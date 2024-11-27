@@ -1,6 +1,6 @@
 # Mock design of image bellow with simple css
 
-![Alt text](mock.jepg)
+![Screenshot of mocked design](./mock.jpeg)
 
 ### Using this feature only
 * display: inline, inline-block;
