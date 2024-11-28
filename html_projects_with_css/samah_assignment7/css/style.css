@@ -5,11 +5,10 @@ body {
     margin: 0%;
     font-family: sans-serif;
     color: #feffff;
-    background: url("../images/014d3293-867f-4b7c-a487-ad72f017e1f7.jpeg") no-repeat left / 50% 38.4375em border-box border-box;
 }
 
 header {
-    background: linear-gradient(to left, #4270a2 50%, rgba(255, 255, 255, 0) 57%) no-repeat;
+    background: linear-gradient(to left, #4270a2 50%, rgba(255, 255, 255, 0) 57%) no-repeat, url("../images/014d3293-867f-4b7c-a487-ad72f017e1f7.jpeg") no-repeat left / 50% 38.4375em border-box border-box;
     height: 38.4375em;
     
 }
