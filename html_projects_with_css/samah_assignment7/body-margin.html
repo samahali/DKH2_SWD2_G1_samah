@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: auto;
+        }
+        div {
+            height: 250px;
+            margin: auto;
+            width: 400px;
+            background: rebeccapurple;     
+            font-weight: bold;
+            color: #d8dfe6;   
+            text-align: center;
+            padding: 3px;
+        }
+        code {
+            color: rgb(236, 108, 23);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Div is block element but when give body height 100% for example and give this body 
+        <code>margin: auto</code> it will not center the <i> Div </i>in left and right but when give the div itself margin: auto div will be centered in x 
+        but it will not be centered in the y co-ordinate
+        body its height will be the height of div. So margin works only in horizontal not vertical 
+        to make it works in vertical we need to use:
+        <br>
+        <pre>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </pre>
+    </div>
+</body>
+</html>
