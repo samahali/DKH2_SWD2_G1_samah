@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    font-family: sans-serif;
+    color: #feffff;
+}
+
+header {
+    background: linear-gradient(to left, #4270a2 50%, rgba(255, 255, 255, 0) 57%) no-repeat,
+        url("../images/014d3293-867f-4b7c-a487-ad72f017e1f7.jpeg") no-repeat left / 50% 38.4375em border-box border-box;
+    height: 38.4375em;
+}
+
+nav {
+    background: linear-gradient(to left, #4270a2 0%, rgba(255, 255, 255, 0));
+    width: 100%;
+    height: 5.3125em;
+}
+
+nav :where(div, ul) {
+    float: inline-start;
+    padding-top: 0.5%;
+}
+
+ul {
+    margin-left: 2em;
+}
+
+ul li {
+    display: inline;
+    margin-left: 2em;
+    font-size: large;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #124562;
+    font-weight: bold;
+}
+
+#div-logo {
+    margin-left: 6.5%;
+    margin-right: 32%;
+}
+
+nav img {
+    width: 4.375em;
+    height: 4.375em;
+}
+
+aside {
+    width: 50%;
+    margin-left: auto;
+}
+
+h1 {
+    margin: 9% 0px 4%;
+    font-size: 2.88em;
+    text-shadow: 0.0125em 0.0125em #0a0a0a;
+    padding-left: 1.5em;
+}
+
+aside p {
+    width: 88%;
+    margin-bottom: 7%;
+    text-shadow: 0.0625em 0.0625em #0a0a0a;
+    line-height: 0.8cm;
+    text-align: justify;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding-left: 5em;
+    padding-right: 2.1875em;
+}
+
+.book-btn {
+    padding: 2% 4%;
+    border: none;
+    border-radius: 10%;
+    background: #124562;
+}
+
+button span {
+    color: #feffff;
+    font-weight: bolder;
+    font-size: 1.58em;
+}
+
+button:hover {
+    background: #052a3f;
+    cursor: pointer;
+}
+
+.div-btn {
+    padding-left: 6em;
+}
