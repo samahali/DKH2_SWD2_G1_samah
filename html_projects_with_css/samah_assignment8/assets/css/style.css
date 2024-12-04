@@ -1,0 +1,124 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+html, body, main {
+    margin: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+/* Header and nav styling */
+.k-head-nav-width {
+    width: 75%;
+    margin: auto;
+}
+.k-nav {
+    display: block;
+    height: 8rem;
+    font-size: 16pt;
+}
+#k-logo {
+    float: inline-start;
+    width: 13rem;
+    padding-top: .3rem;
+}
+#k-menu {
+    float: inline-start;
+    width: 84%;
+    margin-block: 2rem;
+    padding-inline-start: 4rem;
+}
+#k-menu menu, menu li{
+    float: inline-start;
+    display: inline;
+    margin-inline-end: 2rem;
+
+}
+a {
+    color: #5c6177;
+    text-decoration: none;;
+}
+a:hover {
+    text-decoration: underline;
+}
+.k-btn-sign {
+    float: inline-end;
+}
+.k-btn-sign button {
+    font-size: 16pt;
+    color: #fff;
+    background: #f3a9aa;
+    padding: 1rem 0;
+    margin-inline-start: 1rem;
+    width: 7rem;
+    border: none;
+    border-radius: 20px;
+}
+#k-logo img{
+    width: 15rem;
+    height: 8rem;
+    border-radius: 50%;
+    float: inline-start;
+}
+header {
+    background: url("../images/pyramids.jpeg") no-repeat center top  / cover border-box border-box;
+    height: 68%;
+    border-radius: 30px;
+    filter: brightness(70%);
+}
+h1 {
+    font-size: 50px;
+    position: absolute;
+    left: 16%;
+    top: 29.9%;
+    color: #fff;
+}
+h3 {
+    position: absolute;
+    left: 16%;
+    top: 45%;
+    color: #fff;
+    font-size: 17px !important;
+}
+/* Section and elements inside it styling */
+.fi{
+    color: #ff7012;
+    font-size: 2rem;
+    float: inline-end;
+    margin-inline-end: 4%;
+    margin-block: 5%;
+}
+section {
+    background: #fff;
+    width: 75%;
+    margin: auto;
+    padding-inline-start: 1%;
+    padding-block-start: 1.5%;
+    border: solid 1px black;
+    border-radius: 30px;
+    height: 10rem;
+    position: absolute;
+    top: 64.5%;
+    right: 229.3px;
+}
+section div{
+    float: inline-start;
+    margin-inline-end: 1rem;
+}
+section > div{
+    border: solid 2px #dee2e5;
+    border-radius: 20px;
+    width: 350px;
+    height: 90px;
+    padding-inline-start: 20px;
+    padding-block-start: 10px;
+}
+#k-btn-srch {
+    margin-inline-start: 15px;
+    width: 170px;
+    height: 90px;
+    font-size: 20pt;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    background: #ff7012;
+}
