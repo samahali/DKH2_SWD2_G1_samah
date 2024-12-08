@@ -1,0 +1,176 @@
+@import url("fonts.css");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body,
+main {
+  height: 100%;
+  margin: 0;
+}
+.s-ftr-hdr-txt-color {
+  color: hsl(92, 63%, 18%);
+}
+.itim-regular {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+}
+header {
+  height: 15%;
+}
+ul {
+  padding-top: 2%;
+}
+nav, nav:where(div, ul) {
+  height: 100%;
+}
+#div-logo{
+  font-size: 50px;
+  font-family: scripto;
+  color: rgb(214, 218, 3);
+  float: inline-start;
+  padding-inline-start: 3rem;
+  margin-inline-end: 30rem;
+  text-shadow: 2px 2px rgb(7, 7, 7);
+}
+nav a {
+  font-family: "firecatmedium";
+  font-size: xx-large;
+  text-decoration: none;
+  text-shadow: 4px 4px rgb(7, 7, 7);
+}
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  margin-inline-end: 2%;
+  vertical-align: middle;
+}
+body {
+  /* background: url("../images/16263127_8ewt_wtrm_210409.svg") no-repeat fixed
+    center top / cover border-box border-box; */
+    background: url("https://img.freepik.com/premium-photo/nature-cartoon-background_1020697-39545.jpg") no-repeat fixed
+    center right / cover border-box border-box;
+}
+main::before,
+main::after {
+  content: ""; /* Required for pseudo-elements */
+  width: 13%; /* Width for left and right background areas */
+  height: 25%;
+  position: absolute;
+}
+
+main::before {
+  top: 10%;
+  background: url("../images/tom-203.png") top / cover;
+  left: 0.5;
+}
+
+main::after {
+  bottom: -15%;
+  margin-inline-end: 5%;
+  background: url("../images/jerry.png") top / cover;
+  right: 0;
+}
+main {
+  width: 80%;
+  background: hsla(0, 10%, 86%, 0.678);
+  margin: auto;
+  border-radius: 25% 0%;
+}
+aside {
+  position: fixed;
+  top:50%;
+  left: 5%;
+}
+aside a, aside a:visited {
+  color: hsl(130, 21%, 27%);
+}
+aside a:hover {
+  color: hsl(89, 60%, 43%);
+}
+aside div {
+  font-size: 2.5rem;
+}
+aside div:hover {
+  font-size: 3rem;
+
+}
+
+section {
+    height: 100%;
+    margin-inline-start:7%;  
+    border-radius: 25% 0%;
+}
+.s-story{
+    float: left;
+    width: 32%;
+    height: 70%;
+    margin-top:10%;
+    padding-inline-end: 3%;
+
+}
+.s-title {
+ text-align: center; 
+ font-family: scripto;
+ color: hsl(0, 0%, 100%);
+ text-shadow: 1px 2px rgb(7, 7, 7);
+ border-top-left-radius: 40%;
+ border-top-right-radius: 40%;
+}
+.s-title-1 {
+  background-color: hsl(238, 43%, 65%);
+ }
+ .s-title-2 {
+  background-color: rgb(201, 114, 64);
+ }
+ .s-title-3 {
+  background-color: rgb(137, 65, 155);
+ }
+.s-cover {
+    width: 100%;
+    height: 40%;
+    border-radius: 5%;
+}
+.s-cover img {
+    width: 100%;
+    height: 100%;
+}
+.s-script {
+    width: 100%;
+    height: 60%;
+    padding-inline: 5%;
+    text-align: start;
+    line-height: 3rem;
+    overflow-y: auto;
+    border-bottom-left-radius: 5%;
+
+}
+.s-script-1 {
+  background-color: hsl(238, 32%, 80%);
+}
+.s-script-2 {
+  background-color: hsl(24, 87%, 76%);
+}
+.s-script-3 {
+  background-color: hsl(282, 78%, 86%);
+}
+footer{
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  position: relative;
+}
+footer div{
+  font-family: "firecatmedium";
+  font-size: xx-large;
+  color: hsl(93, 78%, 13%);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-shadow: 1px 2px rgb(7, 7, 7);
+
+}
