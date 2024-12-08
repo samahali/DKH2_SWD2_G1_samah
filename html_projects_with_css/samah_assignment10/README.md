@@ -25,7 +25,7 @@ using this media query only
 #### Steps
 
 * Clone the Repository:
-`git clone https://github.com/yourusername/story-kids.git`
+`git clone https://github.com/yourusername/samah_assignment10.git`
 
 * Navigate to the Project Folder:
 `cd samah_assignment10`
