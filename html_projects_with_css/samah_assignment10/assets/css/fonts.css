@@ -1,0 +1,17 @@
+/* font awesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
+/* Itim font family */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Butterfly+Kids&family=Crafty+Girls&family=Itim&display=swap');
+@font-face {
+  font-family: "firecatmedium";
+  src: url("../../assets/fonts/FirecatMedium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: "scripto";
+    src: url("../fonts/Scripto-2OR2v.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
