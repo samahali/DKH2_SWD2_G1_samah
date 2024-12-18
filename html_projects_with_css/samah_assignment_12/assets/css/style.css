@@ -1,0 +1,178 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+/* Header styling*/
+header {
+  height: 30%;
+}
+header nav {
+  background-color: rgba(223, 220, 181, 0.568);
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2%;
+  padding-block: 1%;
+  align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(41, 82, 7);
+    font-weight: 800;
+}
+nav img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+/* main styling*/
+main {
+  height: 55%;
+  width: 70%;
+  margin: auto;
+  background-color: rgba(58, 102, 23, 0.336);
+  margin-block-end: 15%;
+}
+/* section, div styling*/
+section {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-block: 2%;
+}
+section div {
+  width: 30%;
+  height: 30%;
+  text-align: center;
+  background: rgb(231, 206, 160);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 2%;
+  background: linear-gradient(
+    45deg,
+    #ff6a00,
+    #ee0979,
+    #ffb600,
+    #6a11cb,
+    #2575fc
+  );
+  border-radius: 50%;
+  background-size: 400% 400%;
+  position: relative;
+  animation: color-transition 15s ease infinite;
+  box-shadow: 5px 5px 5px 5px #a09d9d;
+}
+
+div.card-top:hover {
+    animation: animated-top 4s;
+}
+
+div.card-middle {
+  align-self: center;
+}
+div.card-middle:hover {
+    animation: animated-middle 4s;
+}
+div.card-bottom {
+  align-self: flex-end;
+}
+div.card-bottom:hover {
+   animation: animated-bottom 4s;
+}
+/* animation keyframs*/
+@keyframes animated-top {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 70%;
+  }
+}
+@keyframes animated-bottom {
+  from {
+    bottom: 0%;
+  }
+  to {
+    bottom: 70%;
+  }
+}
+@keyframes animated-middle {
+  0% {
+    top: 0%;
+  }
+  25% {
+    top: -35%;
+  }
+  50% {
+    top: 0;
+  }
+  75% {
+    top: 35%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes color-transition {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Footer Styling */
+footer {
+    position: relative;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 20px 0;
+  }
+.footer-content {
+    text-align: center;
+  }
+  
+  footer small {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    color: #6a11cb; /* Or any color for hover effect */
+  }
