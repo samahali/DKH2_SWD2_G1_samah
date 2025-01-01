@@ -37,8 +37,8 @@ nav a {
     font-weight: 800;
 }
 nav img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
 /* main styling*/
@@ -47,7 +47,8 @@ main {
   display: flex;
   justify-items: center;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  padding-block-start: 3%;
   color: var(--white-color);
 }
 button {
