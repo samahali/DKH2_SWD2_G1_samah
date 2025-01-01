@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "InspireTWDC";
+    src: url("https://db.onlinewebfonts.com/t/130a63bec7d0efc605bbe6253a27de98.eot");
+    src: url("https://db.onlinewebfonts.com/t/130a63bec7d0efc605bbe6253a27de98.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/130a63bec7d0efc605bbe6253a27de98.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/130a63bec7d0efc605bbe6253a27de98.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/130a63bec7d0efc605bbe6253a27de98.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/130a63bec7d0efc605bbe6253a27de98.svg#InspireTWDC")format("svg");
+}
+
+@font-face {
+    font-family: "AvenirNextCyr-Regular";
+    src: url("https://db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.eot");
+    src: url("https://db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/11d164da9b46e6f7955e396757e5ca70.svg#AvenirNextCyr-Regular")format("svg");
+}
+
+@font-face {
+    font-family: "Matterhorn Regular";
+    src: url("https://db.onlinewebfonts.com/t/af440610bc1700949f3c8422d4e04494.eot");
+    src: url("https://db.onlinewebfonts.com/t/af440610bc1700949f3c8422d4e04494.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/af440610bc1700949f3c8422d4e04494.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/af440610bc1700949f3c8422d4e04494.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/af440610bc1700949f3c8422d4e04494.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/af440610bc1700949f3c8422d4e04494.svg#Matterhorn Regular")format("svg");
+}
