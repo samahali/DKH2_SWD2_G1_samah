@@ -1,0 +1,155 @@
+:root {
+  --fs-12px-in-rem: 0.75rem;
+  --fs-14px-in-rem: 0.875rem;
+  --primary-color: #0a66c2;
+  --grey-color: #00000099;
+
+}
+.text-primary {
+  color: var(--primary-color) !important
+}
+.text-bg-primary{
+  background-color: var(--primary-color) !important;
+}
+.text-grey{
+  color: var(--grey-color) !important;
+}
+.sign-in {
+  flex: 1;
+  padding-block: 4%;
+}
+.google-pb {
+  padding-bottom: 0.8rem !important;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+main {
+  flex: 1;
+}
+footer {
+  flex-shrink: 0;
+  height: 72px;
+  font-size: var(--fs-12px-in-rem);
+}
+footer button {
+  font-size: var(--fs-12px-in-rem) !important;
+  font-weight: 500 !important;
+}
+.card {
+    width: 24rem;
+    max-width: 352px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+.card input[type="text"], input[type="password"]{
+  height: 52px;
+  border-color: rgb(138, 137, 137);
+  padding: 4px 12px 6px;
+  border-radius: 4px;
+  font-size: 1.2rem !important;
+  line-height: 1.33333 !important;
+}
+input[type="input"]:focus, input[type="password"]:focus {
+  border-color: var(--primary-color) !important;
+  border-width: 2px !important;
+}
+.show-span {
+  top: 12px;
+  right: 30px;
+  height: 30px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color) !important;
+  cursor: pointer;
+}
+.show-span:hover {
+  border-radius: 20px;
+  background-color: #2f79c434;
+}
+.fs-0-75 {
+  font-size: var(--fs-12px-in-rem);
+}
+.fs-0-875 {
+  font-size: var(--fs-14px-in-rem);
+  color: #3c4043;
+  letter-spacing: 0.25px;
+}
+.fs-7 {
+    font-size: 0.9rem;
+}
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.seperator::before,
+.seperator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #ccc; /* Adjust color as needed */
+}
+.seperator::after {
+    margin-left: 10px; /* Adjust spacing */
+  }
+.seperator span {
+    display: inline;
+    font-size: 14px; /* Adjust font size */
+    color: #555; /* Adjust text color */
+}
+
+input[type="checkbox"] {
+  transform: scale(1.231); /* Scale  */
+}
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  appearance: none; /* Removes default appearance */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  width: 16px;
+  height: 16px;
+  border: 1px solid #333;
+  border-radius: 2px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Style the checkbox when it is checked */
+input[type="checkbox"]:checked {
+  background-color: var(--primary-color); /* Green background when checked */
+  border-color: var(--primary-color); /* Green border */
+}
+
+input[type="checkbox"]:checked::after {
+  content: '\2713'; /* Checkmark character */
+  position: absolute;
+  top: -50%;
+  left: 0px;
+  font-size: 19px;
+  font-weight: 400;
+  color: white; /* White checkmark */
+}
+
+/* Label styling */
+span {
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button, input {
+  max-width: 304px !important;
+}
+
+@media  (max-width:801px) {
+  .card {
+      box-shadow: none;
+  }
+}
