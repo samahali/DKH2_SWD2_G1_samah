@@ -1,0 +1,10 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+td:hover span{
+    display: inline-flex;
+    animation: none; /* Reset animation to allow re-trigger */
+}
+td:hover span{
+    animation: flip 1s; /* Apply flip animation */
+}
