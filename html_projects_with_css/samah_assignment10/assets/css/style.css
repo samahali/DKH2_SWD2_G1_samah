@@ -11,9 +11,9 @@
 html,
 body,
 main {
-  height: 100%;
   margin: 0;
 }
+
 .s-ftr-hdr-txt-color {
   color: hsl(92, 63%, 18%);
 }
@@ -24,10 +24,11 @@ main {
   font-size: xx-large;
 }
 header {
-  height: 15%;
+  width: 100%;
+  height: 15vh;
 }
 ul {
-  padding-top: 0.5%;
+  padding-block-start: 1rem;
   display: block;
 }
 nav, nav:where(div, ul) {
@@ -40,7 +41,7 @@ nav, nav:where(div, ul) {
   position: relative;
 }
 #div-logo{
-  font-size: 50px;
+  font-size: 2.5rem;
   font-family: scripto;
   color: rgb(214, 218, 3);
   float: inline-start;
@@ -57,12 +58,21 @@ nav a {
 nav li {
   list-style-type: none;
   display: inline-block;
-  margin-inline-end: 2%;
+  margin-inline-end: 2rem;
   vertical-align: middle;
 }
 body {
     background: url("https://img.freepik.com/premium-photo/nature-cartoon-background_1020697-39545.jpg") no-repeat fixed
     center right / cover border-box border-box;
+}
+
+main {
+  width: 80%;
+  background: hsla(0, 10%, 86%, 0.678);
+  margin: auto;
+  border-radius: 230px 0px;
+  height: 100vh;
+  overflow-y: auto;
 }
 main::before,
 main::after {
@@ -84,16 +94,10 @@ main::after {
   background: url("../images/jerry.png") top / cover;
   right: 0;
 }
-main {
-  width: 80%;
-  background: hsla(0, 10%, 86%, 0.678);
-  margin: auto;
-  border-radius: 25% 0%;
-}
 aside {
   position: fixed;
-  top:50%;
-  left: 5%;
+  top:50vh;
+  left: 3vw;
 }
 aside a, aside a:visited {
   color: hsl(130, 21%, 27%);
@@ -111,15 +115,15 @@ aside div:hover {
 
 section {
     height: 100%;
-    margin-inline-start:7%;  
-    border-radius: 25% 0%;
+    margin-inline-start:5.9rem;  
+    border-radius: 250px 0px;
 }
 .s-story{
     float: left;
     width: 32%;
     height: 70%;
-    margin-top:10%;
-    padding-inline-end: 3%;
+    margin-top:9rem;
+    padding-inline-end: 3rem;
 
 }
 .s-title {
@@ -127,8 +131,8 @@ section {
  font-family: scripto;
  color: hsl(0, 0%, 100%);
  text-shadow: 1px 2px rgb(7, 7, 7);
- border-top-left-radius: 40%;
- border-top-right-radius: 40%;
+ border-top-left-radius: 400px;
+ border-top-right-radius: 400px;
 }
 .s-title-1 {
   background-color: hsl(238, 43%, 65%);
@@ -142,7 +146,7 @@ section {
 .s-cover {
     width: 100%;
     height: 40%;
-    border-radius: 5%;
+    border-radius: 50px;
 }
 .s-cover img {
     width: 100%;
@@ -151,12 +155,12 @@ section {
 .s-script {
     width: 100%;
     height: 60%;
-    padding-inline: 5%;
-    text-align: start;
+    padding-inline: 1.5rem;
+    text-wrap: balance;
     line-height: 3rem;
     overflow-y: auto;
     overflow-x: hidden;
-    border-bottom-left-radius: 5%;
+    border-bottom-left-radius: 40px;
 
 }
 .s-script-1 {
@@ -185,9 +189,11 @@ footer div{
 
 }
 /* mobile */
-@media(min-width:400px) and (max-width:768px) {
+@media(min-width:320px) and (max-width:699.98px) {
+  header {
+    width: 100vw;
+  }
   ul {
-    padding-top: 2%;
     display: none;
   }
 
@@ -209,7 +215,7 @@ footer div{
     font-family: scripto;
     color: hsl(61, 97%, 43%);
     float: inline-start;
-    padding-inline-start: 3rem;
+    padding-inline-start: 1rem;
     margin-block-start: 4%;
     margin-inline-end: 0rem;
     text-shadow: 2px 2px rgb(7, 7, 7);
@@ -222,7 +228,7 @@ footer div{
     position: absolute;
     right: 0;
     top:33px;
-  }
+  } 
   nav a {
     font-size: large;
     text-decoration: none;
@@ -243,7 +249,7 @@ footer div{
   }
   
   main::before {
-    top: 8%;
+    top: 0%;
     background: none;
     left: 0%;
   }
@@ -256,35 +262,27 @@ footer div{
     right: 0;
   }
   main {
-    width: 90%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: none;
     margin: auto;
     position: relative;
+    border-radius: 0px;
   }
   aside {
-    position: fixed;
-    top:50%;
-    left: 1%;
-  }
-  aside a, aside a:visited {
-    color: hsl(130, 21%, 27%);
-  }
-  aside a:hover {
-    color: hsl(89, 60%, 43%);
+    left: 1rem;
   }
   section {
-      height: 100%;
-      margin-inline-start:7%;  
-      border-radius: 25% 0%;
-  }
+    height: 100%;
+    margin:0rem;  
+    padding: 0;
+}
   .s-story{
-      float: left;
+      float: none;
       width: 100%;
-      height: 50%;
-      margin-block:10%;
-      padding-inline-end: 3%;
-  
+      height: 40rem;
+      margin-block:3rem;
+      padding-inline: 0.1rem;  
   }
   footer{
     width: 100%;
@@ -304,7 +302,7 @@ footer div{
 }
 
 /* Tablets */
-@media(min-width:769px) and (max-width:1024px) {
+@media(min-width:700px) and (max-width:1024.98px) {
   #div-logo{
     font-size: 30px;
     font-family: scripto;
@@ -321,34 +319,34 @@ footer div{
     text-decoration: none;
     text-shadow: 4px 4px rgb(7, 7, 7);
   }
-  main::before {
-    background: none;
-  }
-
+  main::before,
   main::after {
-    background: none;
+    content: ""; /* Required for pseudo-elements */
+    width: 10rem; /* Width for left and right background areas */
+    height: 10rem;
+    position: absolute;
   }
-  main {
-    width: 85%;
-    height: 100%;
-    margin: auto;
-    position: relative;
-    overflow-y: auto;
+  
+  main::before {
+    top: 10%;
+    background: url("../images/tom-203.png") top / cover;
+    left: 0.5;
+  }
+  
+  main::after {
+    bottom: -18%;
+    margin-inline-end: 5%;
+    background: url("../images/jerry.png") top / cover;
+    right: 0;
   }
   aside {
     position: fixed;
     top:50%;
-    left: 1%;
-  }
-  aside a, aside a:visited {
-    color: hsl(130, 21%, 27%);
-  }
-  aside a:hover {
-    color: hsl(89, 60%, 43%);
+    left: 1rem;
   }
   section {
       height: 100%;
-      margin-inline-start:7%;  
+      margin-inline-start:4.5rem;  
       border-radius: 25% 0%;
   }
   .s-story{
@@ -379,23 +377,7 @@ footer div{
   }
 }
 /* Labtops */
-@media(min-width:1025px) and (max-width:1440px) {
-  .s-ftr-hdr-txt-color {
-    color: hsl(92, 63%, 18%);
-  }
-  .itim-regular {
-    font-family: "Itim", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: xx-large;
-  }
-  ul {
-    padding-top: 0.5%;
-    display: block;
-  }
-  nav, nav:where(div, ul) {
-    height: 100%;
-  }
+@media(min-width:1025px) and (max-width:1440.98px) {
   #div-logo{
     font-size: 50px;
     font-family: scripto;
@@ -411,103 +393,36 @@ footer div{
     text-decoration: none;
     text-shadow: 4px 4px rgb(7, 7, 7);
   }
-  nav li {
-    list-style-type: none;
-    display: inline-block;
-    margin-inline-end: 2%;
-    vertical-align: middle;
-  }
   main::before,
   main::after {
-    content: ""; /* Required for pseudo-elements */
     width: 13%; /* Width for left and right background areas */
-    height: 23%;
-    position: absolute;
+    height: 15%;
   }
   
   main::before {
-    top: 14%;
-    background: url("../images/tom-203.png") top / cover;
-    left: 5%;
+    top: 7rem;
+    left: 3rem;
   }
   
   main::after {
-    bottom: -15%;
-    margin-inline-end: 5%;
-    background: url("../images/jerry.png") top / cover;
-    right: -3%;
+    bottom: -8rem;
+    right: -3rem;
   }
   main {
-    width: 85%;
-    background: hsla(0, 10%, 86%, 0.678);
-    margin: auto;
-    border-radius: 25% 0%;
-  }
-  aside {
-    position: fixed;
-    top:50%;
-    left: 2%;
-  }
-  aside a, aside a:visited {
-    color: hsl(130, 21%, 27%);
-  }
-  aside a:hover {
-    color: hsl(89, 60%, 43%);
-  }
-  aside div {
-    font-size: 2.5rem;
-  }
-  aside div:hover {
-    font-size: 3rem;
-  
+    width: 90%;
   }
   
   section {
       height: 100%;
       margin-inline-start:7%;  
-      border-radius: 25% 0%;
   }
   .s-story{
       float: left;
       width: 33%;
-      height: 70%;
-      margin-top:10%;
-      padding-inline-end: 3%;
-  
+      margin-top:5rem;
+      padding-inline-end: 2rem;
   }
   .s-title {
-   text-align: center; 
-   font-family: scripto;
    font-size: x-large;
-   color: hsl(0, 0%, 100%);
-   text-shadow: 1px 2px rgb(7, 7, 7);
-   border-top-left-radius: 40%;
-   border-top-right-radius: 40%;
-  }
-  .s-script {
-      width: 100%;
-      height: 60%;
-      padding-inline: 5%;
-      text-align: start;
-      line-height: 3rem;
-      overflow-y: auto;
-      border-bottom-left-radius: 5%;
-  
-  }
-  footer{
-    width: 100%;
-    height: 15%;
-    text-align: center;
-    position: relative;
-  }
-  footer div{
-    font-family: "firecatmedium";
-    font-size: xx-large;
-    color: hsl(93, 78%, 13%);
-    width: 100%;
-    position: absolute;
-    bottom: 0%;
-    text-shadow: 1px 2px rgb(7, 7, 7);
-  
   }
 }
