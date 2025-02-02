@@ -1,0 +1,50 @@
+div.card {
+    width: 50%;
+    height: 41.6875rem;
+    flex-shrink: 0;
+    box-shadow: 3px 3px 5px 6px #ccc !important;
+}
+div.card:hover {
+    transform: skewX(0deg);
+}
+
+img.card-img-top {
+    object-fit: cover;
+    object-position: top left;
+    height: 100%;
+    /* opacity: 50%; */
+    /* filter: invert(0.3); */
+    filter: contrast(30%) hue-rotate(351deg);
+}
+input[type="number"]{
+    outline: none;
+    border: 5px solid !important;
+    border-image: linear-gradient(to right, #fd8189, #3c6dd9) 1 !important;
+}
+a.btn {
+    background: #e91e6357;
+    width: 161.88px;
+}
+a.btn:hover, a.active{
+    border: 2px solid !important;
+    border-image: linear-gradient(to right, #f7ff88, #3c6dd9) 1 !important;
+    text-shadow: 2px 2px #2f2e2e;
+}
+@media screen and (max-width:1399px) {
+    div.card {
+        width: 70%;
+        height: 667px;
+    }
+    div.alert-dark {
+        width: 70% !important;
+    }
+}
+@media screen and (max-width:576px){
+    div.card {
+        width: 100%;
+        height: 667px;
+    }
+    div.alert-dark {
+        width: 100% !important;
+    }
+}
