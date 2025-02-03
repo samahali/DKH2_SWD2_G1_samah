@@ -53,9 +53,18 @@ footer button {
   font-size: 1.2rem !important;
   line-height: 1.33333 !important;
 }
-input[type="input"]:focus, input[type="password"]:focus {
+input[type="text"]:focus, input[type="password"]:focus {
   border-color: var(--primary-color) !important;
   border-width: 2px !important;
+}
+.form-floating>label {
+  font-size: 1.125rem;
+  color:rgb(97, 97, 97);
+  left: 1.5px;
+  padding: 0.7rem 1.5rem;
+}
+.form-floating:focus-within > label {
+  color: black !important;
 }
 .show-span {
   top: 12px;
