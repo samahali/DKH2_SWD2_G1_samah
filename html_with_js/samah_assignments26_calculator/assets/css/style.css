@@ -1,0 +1,221 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+    --primary-color: #474747;
+    --white-color: white;
+    --calc-background: #2c2c2c;
+    --operation-btn-background: #404040;
+    --num-btn-background: #555555;
+    --equal-btn-background: #eb6536;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+/* Header styling*/
+header {
+  height: 15%;
+}
+header nav {
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(1, 1, 0));
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2%;
+  padding-block: 1%;
+  align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(193, 201, 206);
+    font-weight: 800;
+}
+nav img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/* main styling*/
+main {
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: start;
+  padding-block-start: 3%;
+  color: var(--white-color);
+}
+button {
+  background-color: var(--operation-btn-background);
+  font-size: 25px;
+  color: var(--white-color);
+  border: none;
+  border-radius: 10%;
+}
+button:hover {
+  background-color: gray;
+  color: var(--calc-background);
+}
+button:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+#calc {
+  padding: 5px;
+  border-radius: 2%;
+  background-color: var(--calc-background);
+  display: grid;
+  width: 30%;
+  height: 70%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 3px;
+  grid-template-areas:
+    "display display display display display"
+    "display display display display display"
+    "cdisplay cdisplay cdisplay cdisplay cdisplay"
+    "clear l-arch r-arch mod pi"
+    "seven eight nine divide root"
+    "four five six multiply square"
+    "one two three minus equal"
+    "zero dot percent plus equal";
+}
+
+#display {
+  grid-area: display;
+  color: var(--white-color);
+  text-align: end;
+  background: var(--primary-color);
+  border: none;
+  font-size: 1.5rem;
+}
+#cdisplay {
+    grid-area: cdisplay;
+    background: var(--primary-color);
+    border: none;
+}
+#cdisplay input {
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    border: none;
+    text-align: end;
+    color: var(--white-color);
+    font-size: 1.5rem;
+}
+#cdisplay input:focus {
+  outline: none;
+}
+#clear {
+  grid-area: clear;
+}
+.calc-num {
+    background: var(--num-btn-background);
+}
+#l-arch {
+    grid-area: l-arch;
+}
+#r-arch {
+    grid-area: r-arch;
+}
+#mod {
+    grid-area: mod;
+}
+#pi {
+    grid-area: pi;
+}
+#root {
+    grid-area: root;
+}
+#divide {
+  grid-area: divide;
+}
+#multiply {
+  grid-area: multiply;
+}
+#plus {
+  grid-area: plus;
+}
+#minus {
+  grid-area: minus;
+}
+#seven {
+  grid-area: seven;
+}
+#eight {
+  grid-area: eight;
+}
+#nine {
+  grid-area: nine;
+}
+#four {
+  grid-area: four;
+}
+#five {
+  grid-area: five;
+}
+#three {
+  grid-area: three;
+}
+#two {
+  grid-area: two;
+}
+#one {
+  grid-area: one;
+}
+#dot {
+  grid-area: dot;
+}
+#zero {
+  grid-area: zero;
+}
+#equal {
+  grid-area: equal;
+  background: var(--equal-btn-background);
+}
+#six {
+  grid-area: six;
+}
+#percent {
+    grid-area: percent;
+}
+
+/* Footer Styling */
+footer {
+  position: relative;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 20px 0;
+}
+.footer-content {
+  text-align: center;
+}
+
+footer small {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #6a11cb; /* Or any color for hover effect */
+}
