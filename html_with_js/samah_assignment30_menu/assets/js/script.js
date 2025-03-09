@@ -539,67 +539,69 @@ function updateCartQuantity() {
   console.log("Total Quantity:", totalQuantity);
   document.querySelector("#cart").textContent = totalQuantity;
 }
-document.addEventListener("DOMContentLoaded", function () {
-  const menuItems = (items) => {
-    let content = ``;
-    items.forEach((element) => {
-      const discount = element.discountPrice
-        ? `
-      <span class="fw-bold">
-        <ins class="text-success">${element.discountPrice}</ins> <small>${element.symbol}</small>
-      </span>
-      `
-        : "";
-      const price = element.discountPrice
-        ? `Price: <del class="text-danger">${element.price}</del> <small>${element.symbol}</small>`
-        : `Price: <span>${element.price}</span> <small>${element.symbol}</small>`;
-      content += `<div class="card">
-          <div class="card-header">
-            <img class="menuImage" src="${element.url}" alt="${element.title}">
-          </div>
-          <div class="card-body">
-              <h5 class="card-title">${element.title}</h5>
-              <p>
-                <span class="fw-bold">
-                  ${price}
-                </span>
-                ${discount}
-              </p>
-          </div>
-          <div class="card-footer text-muted">
-            <div class="d-flex">
-              <!-- <button class="btn btn-outline-dark flex-shrink-0" onclick="addToCart();" type="button">
-                  <i class="fa-solid fa-cart-plus"></i>
-                  Add to cart
-              </button> -->
-              <a
-                  id="${element.id}"
-                  class="btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  href="#cartModalToggle"
-                  role="button"
-                  onclick="openModal(${element.id})"
-                  ><i class="fa-solid fa-cart-plus"></i> Add to cart</a
-              >
-            </div>
-          </div>
-      </div>`;
-    });
-    return content;
-  };
 
-  const menuContent = (menuCategories) => {
-    let content = ``;
-    Object.entries(menuCategories).forEach(([key, value]) => {
-      content += `
-      <h3 class="text-capitalize my-5 text-center">${key}</h3>
-      <div class="d-flex justify-content-center mx-auto gap-3 flex-wrap">
-        ${menuItems(value)}
-      </div>
-      `;
-    });
-    return content;
-  };
+const menuItems = (items) => {
+  let content = ``;
+  items.forEach((element) => {
+    const discount = element.discountPrice
+      ? `
+    <span class="fw-bold">
+      <ins class="text-success">${element.discountPrice}</ins> <small>${element.symbol}</small>
+    </span>
+    `
+      : "";
+    const price = element.discountPrice
+      ? `Price: <del class="text-danger">${element.price}</del> <small>${element.symbol}</small>`
+      : `Price: <span>${element.price}</span> <small>${element.symbol}</small>`;
+    content += `<div class="card">
+        <div class="card-header">
+          <img class="menuImage" src="${element.url}" alt="${element.title}">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">${element.title}</h5>
+            <p>
+              <span class="fw-bold">
+                ${price}
+              </span>
+              ${discount}
+            </p>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="d-flex">
+            <!-- <button class="btn btn-outline-dark flex-shrink-0" onclick="addToCart();" type="button">
+                <i class="fa-solid fa-cart-plus"></i>
+                Add to cart
+            </button> -->
+            <a
+                id="${element.id}"
+                class="btn btn-outline-dark"
+                data-bs-toggle="modal"
+                href="#cartModalToggle"
+                role="button"
+                onclick="openModal(${element.id})"
+                ><i class="fa-solid fa-cart-plus"></i> Add to cart</a
+            >
+          </div>
+        </div>
+    </div>`;
+  });
+  return content;
+};
+
+const menuContent = (menuCategories) => {
+  let content = ``;
+  Object.entries(menuCategories).forEach(([key, value]) => {
+    content += `
+    <h3 class="text-capitalize my-5 text-center">${key}</h3>
+    <div class="d-flex justify-content-center mx-auto gap-3 flex-wrap">
+      ${menuItems(value)}
+    </div>
+    `;
+  });
+  return content;
+};
+
+document.addEventListener("DOMContentLoaded", function () {
 
   Object.entries(menu).forEach(([key, value]) => {
     const classTab = key === "food" ? "show active" : "";
