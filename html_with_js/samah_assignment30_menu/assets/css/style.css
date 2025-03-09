@@ -1,0 +1,148 @@
+:root {
+    --text-gold: #a87933;
+}
+img.about-section {
+    width: 40vw;
+    height: 75vh;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    img.about-section {
+        width: 70vw; 
+        height: 50vh; 
+    }
+}
+main {
+    padding-block-start: 80px;
+}
+a.active{
+    background-color: transparent !important;
+    color: var(--bs-yellow) !important;
+}
+li.nav-item:has(> a.nav-link.active) {
+    border-bottom: solid 2px var(--bs-yellow) !important; /* Change the background color of the <li> */
+}
+
+a.nav-link.active i {
+    color: var(--bs-orange) !important;
+}
+div.card {
+    width: 17rem; /* Set a fixed width */
+    height: 25rem; /* Increased height for uniformity */
+    display: flex;
+    flex-direction: column;
+}
+
+div.card-header {
+    width: 100% !important;
+    height: 14rem !important; /* Ensure all headers have the same height */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Optional: background for uniformity */
+}
+
+img.menuImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+img.product-img {
+    width: 120px;
+    height: 120px; 
+    object-fit: cover;
+    object-position: center;
+}
+div.card-body {
+    flex-grow: 1; /* Make the body expand to fill the available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+div.card-footer {
+    width: 100%;
+    height: 3rem; /* Ensuring footer has same height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-gold{
+    color: var(--text-gold);
+}
+.bg-gold {
+    background-color: var(--text-gold);
+}
+.bg-gold-hover:hover {
+    border-color: var(--text-gold) !important;
+    background-color: transparent;
+}
+.btn-outline-gold {
+    border-color: var(--text-gold) !important;
+}
+.btn-outline-gold-hover:hover {
+    background-color: var(--text-gold) !important;
+}
+
+/* Hide the text by default */
+.hover-text {
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.3s ease, width 0.3s ease;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Show the text on hover */
+.btn:hover .hover-text {
+    opacity: 1;
+    width: auto;
+}
+
+.bg-secondary {
+    background-color: rgb(78 71 37) !important;
+}
+.review-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.review-track {
+    display: flex;
+    width: calc(250px * 10); /* Adjust width dynamically based on number of reviews */
+    animation: scrollReviews 20s linear infinite;
+}
+
+.review-card {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 0 10px;
+    border-radius: 10px;
+    text-align: center;
+    white-space: normal;
+    flex-shrink: 0;
+}
+
+.stars {
+    color: yellow;
+    font-size: 18px;
+}
+
+@keyframes scrollReviews {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

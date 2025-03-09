@@ -1,0 +1,228 @@
+{
+    "food": {
+        "pizza": [
+            {
+                "id": 1,
+                "title": "Margherita pizza",
+                "url": "https://www.vegrecipesofindia.com/wp-content/uploads/2020/12/margherita-pizza-4.jpg",
+                "price": "150",
+                "discountPrice": "100",
+                "symbol": "EGP"
+            },
+            {
+                "id": 2,
+                "title": "Pizza pepperoni with black olives",
+                "url": "https://www.ilovelindsay.com/assets/components/phpthumbof/cache/pizza-with-black-olives-and-pepperoni-small.f82724c758f5a7e1142cf0568b85d580.jpg",
+                "price": "200",
+                "discountPrice": "170",
+                "symbol": "EGP"
+            },
+            {
+                "id": 3,
+                "title": "Cheese pizza",
+                "url": "https://preppykitchen.com/wp-content/uploads/2021/10/Cheese-Pizza-Feature.jpg",
+                "price": "90",
+                "discountPrice": "75",
+                "symbol": "EGP"
+            },
+            {
+                "id": 4,
+                "title": "Greek Pizza",
+                "url": "https://www.healthyseasonalrecipes.com/wp-content/uploads/2019/12/greek-pizza-21-001.jpg",
+                "price": "300",
+                "discountPrice": "",
+                "symbol": "EGP"
+            },
+            {
+                "id": 5,
+                "title": "Hawaiian-Pizza",
+                "url": "https://outgrilling.com/wp-content/uploads/2024/02/Easy-Hawaiian-Pizza-Recipe-Image-F.jpg",
+                "price": "250",
+                "discountPrice": "150",
+                "symbol": "EGP"
+            },
+            {
+                "id": 6,
+                "title": "Pizza capricciosa",
+                "url": "https://cdn.tasteatlas.com//images/dishes/6b28b438a3b64a7e9fca9081c89f07ff.jpg?width=800&height=513",
+                "price": "80",
+                "discountPrice": "",
+                "symbol": "EGP"
+            }
+        ],
+        "burger": [
+            {
+                "id": 7,
+                "title": "Beef Burger",
+                "url": "https://www.unileverfoodsolutions.com.au/dam/global-ufs/mcos/ANZ/calcmenu/recipes/NZ-recipes/red-meats-&-red-meat-dishes/beef-burger-with-deep-fried-bacon-and-thousand-island-dressing/main-header.jpg",
+                "price": "300",
+                "discountPrice": "",
+                "symbol": "EGP"
+            },
+            {
+                "id": 8,
+                "title": "Chicken Burger",
+                "url": "https://www.chicken.ca/wp-content/uploads/2022/11/Chicken-Burgers-1180x580.jpg",
+                "price": "150",
+                "discountPrice": "50",
+                "symbol": "EGP"
+            },
+            {
+                "id": 9,
+                "title": "Double Cheeseburger",
+                "url": "https://www.kitchensanctuary.com/wp-content/uploads/2021/05/Double-Cheeseburger-square-FS-42.jpg",
+                "price": "200",
+                "discountPrice": "150",
+                "symbol": "EGP"
+            },
+            {
+                "id": 10,
+                "title": "Vegan Burger",
+                "url": "https://www.wellplated.com/wp-content/uploads/2016/03/Black-Bean-Vegan-Burger-Recipe.jpg",
+                "price": "320",
+                "discountPrice": "300",
+                "symbol": "EGP"
+            }
+        ]
+    },
+    "meals": {
+        "chicken": [
+            {
+                "id": 11,
+                "title": "Grilled Chicken",
+                "url": "https://kristineskitchenblog.com/wp-content/uploads/2023/05/grilled-chicken-recipe-25-500x500.jpg",
+                "price": "280",
+                "discountPrice": "",
+                "symbol": "EGP"
+            },
+            {
+                "id": 12,
+                "title": "Fried Chicken",
+                "url": "https://www.allrecipes.com/thmb/q-IfK20zxeyp1DgKWhrVp6CQ43w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-89268-triple-dipped-fried-chicken-beauty-4x3-3961ac838ddd41958e7cb9f49376cd68.jpg",
+                "price": "500",
+                "discountPrice": "400",
+                "symbol": "EGP"
+            },
+            {
+                "id": 13,
+                "title": "Chicken Strips",
+                "url": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Fried-Chicken-Strips_EXPS_FT24_25184_JR_0301_1.jpg",
+                "price": "250",
+                "discountPrice": "140",
+                "symbol": "EGP"
+            }
+        ],
+        "meat": [
+            {
+                "id": 14,
+                "title": "Steak",
+                "url": "https://res.cloudinary.com/perkchops/image/upload/v1625782636/product/202168/eqauhh0muxblbuvwithr.jpg",
+                "price": "500",
+                "discountPrice": "300",
+                "symbol": "EGP"
+            },
+            {
+                "id": 15,
+                "title": "Meatballs",
+                "url": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/02/Meatballs-6.jpg",
+                "price": "250",
+                "discountPrice": "100",
+                "symbol": "EGP"
+            },
+            {
+                "id": 16,
+                "title": "Grilled Beef",
+                "url": "https://www.expondo.co.uk/inspirations/wp-content/uploads/2021/08/grilled-steak.jpg",
+                "price": "450",
+                "discountPrice": "250",
+                "symbol": "EGP"
+            }
+        ]
+    },
+    "drinks": {
+        "hot": [
+            {
+                "id": 17,
+                "title": "Coffee",
+                "url": "https://etimg.etb2bimg.com/photo/113047605.cms",
+                "price": "70",
+                "discountPrice": "",
+                "symbol": "EGP"
+            },
+            {
+                "id": 18,
+                "title": "Tea",
+                "url": "https://www.aok.de/pk/magazin/cms/fileadmin/_processed_/3/b/csm_gruener-tee-gesund_d6b5a8aad4.jpg.webp",
+                "price": "50",
+                "discountPrice": "25",
+                "symbol": "EGP"
+            },
+            {
+                "id": 19,
+                "title": "Cappuccino",
+                "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvthhy8frIY2WeY4dgkTfGd9zzChCeVpv5zw&s",
+                "price": "50",
+                "discountPrice": "40",
+                "symbol": "EGP"
+            },
+            {
+                "id": 20,
+                "title": "Latte",
+                "url": "https://www.cuisinart.com/dw/image/v2/ABAF_PRD/on/demandware.static/-/Sites-us-cuisinart-sfra-Library/default/dw2ca0aa66/images/recipe-Images/cafe-latte1-recipe.jpg?sw=1200&sh=630",
+                "price": "90",
+                "discountPrice": "70",
+                "symbol": "EGP"
+            },
+            {
+                "id": 21,
+                "title": "Espresso",
+                "url": "https://coffeebros.com/cdn/shop/articles/what-is-espresso.jpg?v=1710281243",
+                "price": "100",
+                "discountPrice": "75",
+                "symbol": "EGP"
+            }
+        ],
+        "cold": [
+            {
+                "id": 22,
+                "title": "Iced Coffee",
+                "url": "https://mns.sidechef.com/recipe/34d9bf7f-6bfb-4e60-8301-726e5ac6509c.jpg",
+                "price": "190",
+                "discountPrice": "70",
+                "symbol": "EGP"
+            },
+            {
+                "id": 23,
+                "title": "Iced Tea",
+                "url": "https://s3.amazonaws.com/yummy_uploads2/blog/7482.jpg",
+                "price": "130",
+                "discountPrice": "110",
+                "symbol": "EGP"
+            },
+            {
+                "id": 24,
+                "title": "Soft Drinks",
+                "url": "https://cdn.britannica.com/33/206333-050-598A0208/sodas-plastic-cups-ice-straws.jpg",
+                "price": "200",
+                "discountPrice": "110",
+                "symbol": "EGP"
+            },
+            {
+                "id": 25,
+                "title": "Fresh Juices",
+                "url": "https://www.shutterstock.com/image-photo/pictures-natural-fresh-fruit-juice-260nw-2335482853.jpg",
+                "price": "170",
+                "discountPrice": "80",
+                "symbol": "EGP"
+            },
+            {
+                "id": 26,
+                "title": "Milkshakes",
+                "url": "https://cdn.tasteatlas.com/images/dishes/5291b5f2fcee42849cd84a03bff55e0a.jpg?m=facebook",
+                "price": "120",
+                "discountPrice": "50",
+                "symbol": "EGP"
+            }
+        ]
+    }
+}
