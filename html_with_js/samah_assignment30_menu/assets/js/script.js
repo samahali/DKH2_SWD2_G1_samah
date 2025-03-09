@@ -488,7 +488,7 @@ function openCartModal() {
     </div>
 
     `;
-  // add footer of modal
+    // add footer of modal
   document.querySelector("#modalfooterCheckout").innerHTML = `
       <button type="button" class="btn bg-gold bg-gold-hover text-dark fw-semibold" onclick="proceedToCheckout();">Checkout</button>
     `;
@@ -539,20 +539,21 @@ function updateCartQuantity() {
   console.log("Total Quantity:", totalQuantity);
   document.querySelector("#cart").textContent = totalQuantity;
 }
-const menuItems = (items) => {
-  let content = ``;
-  items.forEach((element) => {
-    const discount = element.discountPrice
-      ? `
+document.addEventListener("DOMContentLoaded", function () {
+  const menuItems = (items) => {
+    let content = ``;
+    items.forEach((element) => {
+      const discount = element.discountPrice
+        ? `
       <span class="fw-bold">
         <ins class="text-success">${element.discountPrice}</ins> <small>${element.symbol}</small>
       </span>
       `
-      : "";
-    const price = element.discountPrice
-      ? `Price: <del class="text-danger">${element.price}</del> <small>${element.symbol}</small>`
-      : `Price: <span>${element.price}</span> <small>${element.symbol}</small>`;
-    content += `<div class="card">
+        : "";
+      const price = element.discountPrice
+        ? `Price: <del class="text-danger">${element.price}</del> <small>${element.symbol}</small>`
+        : `Price: <span>${element.price}</span> <small>${element.symbol}</small>`;
+      content += `<div class="card">
           <div class="card-header">
             <img class="menuImage" src="${element.url}" alt="${element.title}">
           </div>
@@ -583,24 +584,23 @@ const menuItems = (items) => {
             </div>
           </div>
       </div>`;
-  });
-  return content;
-};
+    });
+    return content;
+  };
 
-const menuContent = (menuCategories) => {
-  let content = ``;
-  Object.entries(menuCategories).forEach(([key, value]) => {
-    content += `
+  const menuContent = (menuCategories) => {
+    let content = ``;
+    Object.entries(menuCategories).forEach(([key, value]) => {
+      content += `
       <h3 class="text-capitalize my-5 text-center">${key}</h3>
       <div class="d-flex justify-content-center mx-auto gap-3 flex-wrap">
         ${menuItems(value)}
       </div>
       `;
-  });
-  return content;
-};
-document.addEventListener("DOMContentLoaded", function () {
-  //Load menu food, drinks, meals
+    });
+    return content;
+  };
+
   Object.entries(menu).forEach(([key, value]) => {
     const classTab = key === "food" ? "show active" : "";
     document.querySelector(
