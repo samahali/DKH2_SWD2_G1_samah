@@ -5,14 +5,12 @@
  * @returns {string} - A cleaned string with normalized spaces.
  */
 const cleanText = (html) => {
-
     return html
         .replace(/<br\s*\/?>/gi, " ")   // Replace <br> tags with spaces using gi to Create case-insensitive
         .replace(/[\r\n]+/g, " ")       // Replace newlines with space
         .replace(/\s+/g, " ")           // Replace multiple spaces with a single space
         .trim();                        // Remove leading/trailing spaces
 };
-
 
 /**
  * Searches for a user-provided query within an article and list items, highlighting matches.
@@ -25,22 +23,23 @@ const cleanText = (html) => {
  * @function
  */
 const search = () => {
-    let searchText = document.querySelector("form input").value.trim();
-    let article = document.querySelector("article");
-    let listItems = document.querySelectorAll("li");
+    let searchText = document.querySelector(".search-input").value.trim();
+    let factItems = document.querySelectorAll(".fact-item");
+    let introText = document.querySelector(".intro-text");
 
-    if (!article.dataset.originalText) {
-        article.dataset.originalText = article.innerHTML; // Save original HTML content
+    if (!introText.dataset.originalText) {
+        introText.dataset.originalText = introText.innerHTML; // Save original HTML content
     }
-    listItems.forEach(li => {
-        if (!li.dataset.originalText) {
-            li.dataset.originalText = li.innerHTML; // Save original HTML for each <li>
+    
+    factItems.forEach(item => {
+        if (!item.dataset.originalText) {
+            item.dataset.originalText = item.innerHTML; // Save original HTML
         }
     });
 
     // Reset original content before searching
-    article.innerHTML = article.dataset.originalText;
-    listItems.forEach(li => li.innerHTML = li.dataset.originalText);
+    introText.innerHTML = introText.dataset.originalText;
+    factItems.forEach(item => item.innerHTML = item.dataset.originalText);
 
     if (searchText === "") return;
 
@@ -64,22 +63,59 @@ const search = () => {
                 }
                 node.parentNode.removeChild(node);
             }
-        } else {
+        } else if (node.nodeType === 1 && node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE" && node.nodeName !== "MARK") {
             node.childNodes.forEach(highlightMatches);
         }
     };
 
-    // Apply highlighting to the article and list items
-    highlightMatches(article);
-    listItems.forEach(highlightMatches);
+    // Apply highlighting to the intro and fact items
+    highlightMatches(introText);
+    factItems.forEach(highlightMatches);
 
     if (!foundMatchedText) {
-        return alert("No matches found.");
+        return alert("No matches found. Try different keywords.");
     }
 
     setTimeout(() => {
         let firstMatched = document.querySelector("mark");
-        if (firstMatched) firstMatched.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (firstMatched) {
+            firstMatched.scrollIntoView({ behavior: "smooth", block: "center" });
+            
+            // Add a subtle flash effect to the first match
+            firstMatched.style.transition = "background-color 0.5s ease";
+            firstMatched.style.backgroundColor = "rgba(212, 175, 55, 0.8)";
+            setTimeout(() => {
+                firstMatched.style.backgroundColor = "";
+            }, 1000);
+        }
     }, 100);
 };
 
+// Enable search on Enter key press
+document.querySelector(".search-input").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        search();
+    }
+});
+
+// Add scroll animation
+document.addEventListener("DOMContentLoaded", function() {
+    const factItems = document.querySelectorAll(".fact-item");
+    
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    factItems.forEach(item => {
+        item.style.opacity = "0";
+        item.style.transform = "translateY(20px)";
+        item.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+        observer.observe(item);
+    });
+});
