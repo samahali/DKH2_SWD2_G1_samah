@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>علماء مصر البارزون</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header Will added by module-->
+
+
+  <!-- Main Content -->
+   <main>
+       <div class="container py-5">
+         <div class="row">
+           <!-- Sidebar with Tabs -->
+           <div class="col-md-4 mb-4">
+             <div class="sidebar">
+               <h3 class="text-center mb-4">قائمة العلماء</h3>
+               <ul class="nav-tabs-custom">
+                 <li class="nav-item-custom active" data-tab="scientist1">
+                   <a href="#" class="nav-link-custom">د. أحمد زويل</a>
+                 </li>
+                 <li class="nav-item-custom" data-tab="scientist2">
+                   <a href="#" class="nav-link-custom">د. مجدي يعقوب</a>
+                 </li>
+                 <li class="nav-item-custom" data-tab="scientist3">
+                   <a href="#" class="nav-link-custom">د. فاروق الباز</a>
+                 </li>
+                 <li class="nav-item-custom" data-tab="scientist4">
+                   <a href="#" class="nav-link-custom">د. علي مشرفة</a>
+                 </li>
+                 <li class="nav-item-custom" data-tab="scientist5">
+                   <a href="#" class="nav-link-custom">د. سميرة موسى</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+           
+           <!-- Content Area -->
+         </div>
+       </div>
+   </main>
+
+  <!-- Footer Will added by module-->
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="module">
+    import {header} from "./assets/js/header.js"
+    import content from "./assets/js/content.js"
+    import { footer } from "./assets/js/footer.js"
+    $("body").prepend(header);
+    $("main .row").append(content);
+    $("main").after(footer);
+    $(document).ready(function() {
+      // activate tab using jq
+      $('.nav-item-custom').click(function(e) {
+        e.preventDefault();
+        
+        // find Tab id 
+        const tabId = $(this).data('tab');
+        
+        // remove active from all items
+        $('.nav-item-custom').removeClass('active');
+        $('.tab-content-custom').removeClass('active');
+        
+        // add active class for selected one
+        $(this).addClass('active');
+        $('#' + tabId).addClass('active');
+      });
+    });
+  </script>
+</body>
+</html>
