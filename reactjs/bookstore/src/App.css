@@ -1,7 +1,7 @@
 /* Fixed header styles */
 .fixed-header {
   position: fixed;
-  top: 0px;
+  inset-block-start: 0px;
   width: 100vw;
   z-index: 3;
 }
@@ -18,8 +18,8 @@
 .custom-navbar::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 100%;
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
@@ -45,8 +45,8 @@
 .language-toggle::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
@@ -87,7 +87,7 @@
 
 .search-input {
   border-radius: 20px;
-  padding-right: 40px;
+  padding-inline-end: 40px;
   border: none;
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
@@ -106,8 +106,8 @@
 
 .search-button {
   position: absolute;
-  right: 0;
-  top: 0;
+  inset-inline-end: 0;
+  inset-block-start: 0;
   height: 100%;
   border: none;
   background: transparent;
@@ -165,8 +165,8 @@
 .footer::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 100%;
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
@@ -215,7 +215,7 @@ ul.footer-links {
 .footer-links li::before {
   content: "•";
   position: absolute;
-  left: -15px;
+  inset-inline-start: -15px;
   color: rgba(255, 255, 255, 0.3);
   opacity: 0;
   transition: var(--transition);
@@ -223,7 +223,7 @@ ul.footer-links {
 
 .footer-links li:hover::before {
   opacity: 1;
-  left: -10px;
+  inset-inline-start: -10px;
 }
 
 .newsletter-form {
@@ -299,7 +299,7 @@ ul.footer-links {
 .card-img-top {
   height: 320px;
   object-fit: cover;
-  border-bottom: 3px solid var(--accent-color);
+  border-block-end: 3px solid var(--accent-color);
   transition: var(--transition);
 }
 
@@ -318,13 +318,13 @@ ul.footer-links {
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: var(--box-shadow);
-  border-top: 5px solid var(--secondary-color);
+  border-block-start: 5px solid var(--secondary-color);
   position: sticky;
-  top: 90px; /* Adjusted for fixed navbar */
+  inset-block-start: 90px; /* Adjusted for fixed navbar */
 }
 
 .cart-title {
-  border-bottom: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
   padding-block-end: 1rem;
   margin-block-end: 1.5rem;
   color: var(--primary-color);
@@ -339,7 +339,7 @@ ul.footer-links {
 
 .cart-item {
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-block-end: 1px solid rgba(0, 0, 0, 0.1);
   transition: var(--transition);
 }
 
@@ -359,7 +359,7 @@ ul.footer-links {
   font-weight: bold;
   margin-block-start: 1.5rem;
   padding-block-start: 1.5rem;
-  border-top: 2px solid var(--accent-color);
+  border-block-start: 2px solid var(--accent-color);
   color: var(--dark-color);
 }
 
@@ -424,8 +424,8 @@ ul.footer-links {
 .banner::before {
   content: "";
   position: absolute;
-  top: -50px;
-  right: -50px;
+  inset-block-start: -50px;
+  inset-inline-end: -50px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -435,8 +435,8 @@ ul.footer-links {
 .banner::after {
   content: "";
   position: absolute;
-  bottom: -80px;
-  left: -80px;
+  inset-block-end: -80px;
+  inset-inline-start: -80px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -547,8 +547,8 @@ ul.footer-links {
 
 .book-language {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   color: var(--dark-color);
   padding: 0.3em 0.6em;
@@ -561,9 +561,9 @@ ul.footer-links {
 
 .featured-label {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: var(--primary-color);
+  inset-block-start: 10px;
+  inset-inline-start: 10px;
+  background-color: var(--success-color);
   color: white;
   padding: 0.3em 0.6em;
   border-radius: 4px;
@@ -584,15 +584,12 @@ ul.footer-links {
 .section-title::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
   width: 60px;
   height: 4px;
   background: var(--gradient-secondary);
   border-radius: 2px;
-}
-html[dir=rtl] .section-title::after {
-  right: 0;
 }
 
 /* Category Cards */
@@ -661,8 +658,8 @@ html[dir=rtl] .section-title::after {
 
 .book-image-overlay {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  inset-block-end: 10px;
+  inset-inline-end: 10px;
   display: flex;
   gap: 0.5rem;
 }
@@ -670,20 +667,20 @@ html[dir=rtl] .section-title::after {
 
 .book-badges {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  inset-block-start: 10px;
+  inset-inline-start: 10px;
   z-index: 2;
   display: flex;
   gap: 0.5rem;
 }
 
 .featured-badge {
-  background-color: var(--success-color);
+  background-color: var(--success-color) !important;
   color: white;
 }
 
 .language-badge {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color) !important;
   color: var(--dark-color);
 }
 
@@ -695,7 +692,7 @@ html[dir=rtl] .section-title::after {
 .book-tabs .nav-link {
   color: var(--dark-color) !important;
   border: none;
-  border-bottom: 2px solid transparent;
+  border-block-end: 2px solid transparent;
   border-radius: 0;
   padding: 0.5rem 1rem !important;
   margin: 0 0.5rem;
@@ -703,7 +700,7 @@ html[dir=rtl] .section-title::after {
 }
 
 .book-tabs .nav-link.active {
-  border-bottom: 2px solid var(--primary-color);
+  border-block-end: 2px solid var(--primary-color);
   color: var(--primary-color) !important;
   font-weight: 600;
   background: none;
@@ -767,8 +764,8 @@ html[dir=rtl] .section-title::after {
 
 .share-options {
   position: absolute;
-  bottom: 100%;
-  right: 0;
+  inset-block-end: 100%;
+  inset-inline-end: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -817,7 +814,7 @@ html[dir=rtl] .section-title::after {
   margin-block-start: 2rem;
   margin-block-end: 1rem;
   padding-block-end: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-block-end: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .dark-theme .search-results-header,
@@ -939,8 +936,8 @@ html[dir=rtl] .section-title::after {
   font-size: 3rem;
   color: var(--primary-color);
   position: absolute;
-  left: 1rem;
-  top: 0.5rem;
+  inset-inline-start: 1rem;
+  inset-block-start: 0.5rem;
   opacity: 0.3;
 }
 
@@ -949,8 +946,8 @@ html[dir=rtl] .section-title::after {
   font-size: 3rem;
   color: var(--primary-color);
   position: absolute;
-  right: 1rem;
-  bottom: 1.5rem;
+  inset-inline-end: 1rem;
+  inset-block-end: 1.5rem;
   opacity: 0.3;
 }
 

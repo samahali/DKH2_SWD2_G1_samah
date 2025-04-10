@@ -2,19 +2,19 @@
 import "./App.css";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
-import ProductList from "./components/ProductList";
+import ProductList from "./components/product/ProductList";
 import { Container } from "react-bootstrap";
 import { useState, useEffect, useRef } from "react";
-import Cart from "./components/Cart";
+import Cart from "./components/cart/Cart";
 import ThemeContext from "./context/ThemeContext";
 import {
   TranslationProvider,
   useTranslation,
 } from "./context/TranslationContext";
-import BookDetails from "./components/BookDetails";
-import ReadingList from "./components/ReadingList";
-import BookQuote from "./components/BookQuote";
-import ReadingMoodSelector from "./components/ReadingMoodSelector";
+import BookDetails from "./components/book/BookDetails";
+import ReadingList from "./components/reading/ReadingList";
+import BookQuote from "./components/book/BookQuote";
+import ReadingMoodSelector from "./components/reading/ReadingMoodSelector";
 import { products } from "./data/products"; // Import products data
 
 function AppContent() {

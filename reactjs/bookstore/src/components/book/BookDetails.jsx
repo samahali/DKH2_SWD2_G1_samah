@@ -11,7 +11,7 @@ import {
   Linkedin,
   Clock,
 } from "react-bootstrap-icons";
-import TranslationContext from "../context/TranslationContext";
+import TranslationContext from "../../context/TranslationContext";
 
 export default function BookDetails({
   product,

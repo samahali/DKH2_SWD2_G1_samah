@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, Row, Col, ProgressBar, Button } from "react-bootstrap";
 import { Eye } from "react-bootstrap-icons";
-import { useTranslation } from "../context/TranslationContext";
+import { useTranslation } from "../../context/TranslationContext";
 
 export default function ReadingList({
   books,

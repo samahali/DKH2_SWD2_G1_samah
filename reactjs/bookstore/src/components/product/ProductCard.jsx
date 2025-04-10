@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Card, Button, Badge } from "react-bootstrap";
 import { Star, Cart, Eye, Heart, HeartFill } from "react-bootstrap-icons";
-import TranslationContext from "../context/TranslationContext";
+import TranslationContext from "../../context/TranslationContext";
 
 export default function ProductCard({
   product,

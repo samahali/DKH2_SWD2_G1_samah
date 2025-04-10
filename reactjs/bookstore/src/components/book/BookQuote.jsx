@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
-import TranslationContext from "../context/TranslationContext";
+import TranslationContext from "../../context/TranslationContext";
 
 export default function BookQuote() {
   const { language } = useContext(TranslationContext);

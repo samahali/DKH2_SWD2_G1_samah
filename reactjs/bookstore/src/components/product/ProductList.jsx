@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { Row, Col } from "react-bootstrap";
 import ProductCard from "./ProductCard";
-import TranslationContext from "../context/TranslationContext";
-import Categories from "./Categories";
+import TranslationContext from "../../context/TranslationContext";
+import Categories from "../categories/Categories";
 
 export default function ProductList({
   addToCart,
