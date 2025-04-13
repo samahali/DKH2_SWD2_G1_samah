@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Facebook, Twitter, Instagram, Linkedin } from "react-bootstrap-icons";
 import { useTranslation } from "../../context/TranslationContext";
+import "./Footer.css"
 
 export default function Footer() {
   const { t } = useTranslation();

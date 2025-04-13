@@ -1,16 +1,17 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Card, Button, Badge } from "react-bootstrap";
-import { Star, Cart, Eye, Heart, HeartFill } from "react-bootstrap-icons";
+import { StarFill, Cart, CartFill, Eye, EyeFill, Heart, HeartFill } from "react-bootstrap-icons";
 import TranslationContext from "../../context/TranslationContext";
-
+import "./ProductCard.css"
 export default function ProductCard({
   product,
   addToCart,
+  isInCartItems,
   viewBookDetails,
   toggleWishlist,
   isInWishlist,
   toggleReadingList,
-  isInReadingList,
+  isInReadingList
 }) {
   const { language, translateBookTitle, translateAuthor, translateCategory } =
     useContext(TranslationContext);
@@ -24,6 +25,9 @@ export default function ProductCard({
       ? product.authorEn
       : translateAuthor(product.authorEn, { translation: product.authorAr });
   const category = translateCategory(product.category);
+  const [isWishListHovered, setWishListHovered] = useState(false);
+  const [isCartHovered, setCartHovered] = useState(false);
+  const [isEyeHovered, setEyeHovered] = useState(false);
 
   return (
     <Card className="product-card">
@@ -36,7 +40,7 @@ export default function ProductCard({
         <div className="d-flex justify-content-between align-items-start mb-2">
           <Badge className="category-badge">{category}</Badge>
           <div className="d-flex align-items-center">
-            <Star className="text-warning me-1" />
+            <StarFill className={`text-warning ${language === "en" ? "me-1" : "ms-1"}`} />
             <small>
               {product.rating.rate} ({product.rating.count})
             </small>
@@ -70,6 +74,8 @@ export default function ProductCard({
             <Button
               variant={isInWishlist ? "danger" : "outline-danger"}
               onClick={() => toggleWishlist(product.id)}
+              onMouseEnter={() => setWishListHovered(!isWishListHovered)}
+              onMouseLeave={() => setWishListHovered(!isWishListHovered)}
               className="btn-icon wishlist-btn"
               title={
                 isInWishlist
@@ -77,23 +83,27 @@ export default function ProductCard({
                   : translateCategory("addToWishlist")
               }
             >
-              {isInWishlist ? <HeartFill size={16} /> : <Heart size={16} />}
+              {isInWishlist || isWishListHovered ? <HeartFill size={16} /> : <Heart size={16} />}
             </Button>
             <Button
-              variant="outline-primary"
+              variant="outline-secondary"
               onClick={() => viewBookDetails(product)}
+              onMouseEnter={() => setEyeHovered(!isEyeHovered)}
+              onMouseLeave={() => setEyeHovered(!isEyeHovered)}
               className="btn-icon"
               title={translateCategory("viewDetails")}
             >
-              <Eye size={16} />
+              {isEyeHovered ? <EyeFill size={16} /> : <Eye size={16} />}
             </Button>
             <Button
-              variant="primary"
+              variant={isInCartItems ? "primary" : "outline-primary"}
               onClick={() => addToCart(product)}
+              onMouseEnter={()=> setCartHovered(!isCartHovered)}
+              onMouseLeave={() => setCartHovered(!isCartHovered)}
               className="btn-icon"
               title={translateCategory("addToCart")}
             >
-              <Cart size={16} />
+              {isInCartItems || isCartHovered ? <CartFill size={16} /> : <Cart size={16} />}
             </Button>
           </div>
         </div>

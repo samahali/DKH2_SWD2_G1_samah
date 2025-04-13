@@ -3,9 +3,11 @@ import { Row, Col } from "react-bootstrap";
 import ProductCard from "./ProductCard";
 import TranslationContext from "../../context/TranslationContext";
 import Categories from "../categories/Categories";
+import "./ProductList.css"
 
 export default function ProductList({
   addToCart,
+  cartItems,
   viewBookDetails,
   toggleWishlist,
   wishlist,
@@ -15,7 +17,7 @@ export default function ProductList({
   refs,
   selectedMood,
   toggleReadingList,
-  readingList,
+  readingList
 }) {
   const { language, t, translateCategory } = useContext(TranslationContext);
   const { homeRef, categoriesRef, bestSellersRef } = refs;
@@ -256,6 +258,9 @@ export default function ProductList({
                   <ProductCard
                     product={product}
                     addToCart={addToCart}
+                    isInCartItems={cartItems.some(
+                      (item) => item.id === product.id
+                    )}
                     viewBookDetails={viewBookDetails}
                     toggleWishlist={toggleWishlist}
                     isInWishlist={wishlist.includes(product.id)}
@@ -284,6 +289,9 @@ export default function ProductList({
                   <ProductCard
                     product={product}
                     addToCart={addToCart}
+                    isInCartItems={cartItems.some(
+                  (item) => item.id === product.id
+                )}
                     viewBookDetails={viewBookDetails}
                     toggleWishlist={toggleWishlist}
                     isInWishlist={wishlist.includes(product.id)}
@@ -309,6 +317,9 @@ export default function ProductList({
               <ProductCard
                 product={product}
                 addToCart={addToCart}
+                isInCartItems={cartItems.some(
+                  (item) => item.id === product.id
+                )}
                 viewBookDetails={viewBookDetails}
                 toggleWishlist={toggleWishlist}
                 isInWishlist={wishlist.includes(product.id)}

@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
 import { useTranslation } from "../../context/TranslationContext";
+import "./ReadingMoodSelector.css"
 
 export default function ReadingMoodSelector({ onMoodSelect, selectedMood }) {
   const { t } = useTranslation();

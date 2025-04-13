@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap-icons";
 import { useTranslation } from "../../context/TranslationContext";
 import ThemeContext from "../../context/ThemeContext";
-
+import "./Header.css"
 export default function Header({
   cartItemCount,
   wishlistCount,
@@ -41,7 +41,7 @@ export default function Header({
               scrollToSection("home");
             }}
           >
-            <Book size={30} className="me-2" />
+            <Book size={30} className={`${language === "en" ? "me-2" : "ms-2"}`} />
             BookStore
           </Navbar.Brand>
 
@@ -67,7 +67,7 @@ export default function Header({
                 language === "en" ? t("switchToArabic") : t("switchToEnglish")
               }
             >
-              <Globe size={16} className="me-1" />
+              <Globe size={16} className={`${language === "en" ? "me-1" : "ms-1"}`} />
               {language === "en" ? "العربية" : "English"}
             </Button>
           </div>
@@ -108,7 +108,7 @@ export default function Header({
               </Nav.Link>
             </Nav>
 
-            <Form className="d-flex me-3" onSubmit={handleSearchSubmit}>
+            <Form className={`d-flex ${language === "en" ? "me-3" : "ms-3"}`} onSubmit={handleSearchSubmit}>
               <div className="search-container">
                 <Form.Control
                   type="search"
@@ -129,7 +129,7 @@ export default function Header({
             </Form>
 
             <Nav className="d-flex flex-row">
-              <Nav.Link href="#" className="me-2 position-relative">
+              <Nav.Link href="#" className={`${language === "en" ? "me-2" : "ms-2"} position-relative`}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -149,7 +149,7 @@ export default function Header({
                   </Badge>
                 )}
               </Nav.Link>
-              <Nav.Link href="#" className="me-2 position-relative">
+              <Nav.Link href="#" className={`${language === "en" ? "me-2" : "ms-2"} position-relative`}>
                 <Heart size={20} />
                 {wishlistCount > 0 && (
                   <Badge

@@ -2,20 +2,24 @@ import { useContext, useState } from "react";
 import { Row, Col, Button, Badge, Tabs, Tab } from "react-bootstrap";
 import {
   Star,
+  StarFill,
   Heart,
   HeartFill,
   Share,
   Cart,
+  CartFill,
   Facebook,
   Twitter,
   Linkedin,
   Clock,
 } from "react-bootstrap-icons";
 import TranslationContext from "../../context/TranslationContext";
+import "./BookDetails.css"
 
 export default function BookDetails({
   product,
   addToCart,
+  isInCartItems,
   toggleWishlist,
   isInWishlist,
   toggleReadingList,
@@ -31,7 +35,8 @@ export default function BookDetails({
   } = useContext(TranslationContext);
   const [quantity, setQuantity] = useState(1);
   const [showShareOptions, setShowShareOptions] = useState(false);
-
+  const [isWishListHovered, setWishListHovered] = useState(false);
+  const [isCartHovered, setCartHovered] = useState(false);
   const title =
     language === "en"
       ? product.titleEn
@@ -162,21 +167,21 @@ export default function BookDetails({
         <Col md={7}>
           <Badge className="category-badge mb-3">{category}</Badge>
           <h1 className="book-title-large mb-2">{title}</h1>
-          <h5 className="text-muted mb-3">
+          <h5 className="book-description mb-3">
             {t("by")} {author}
           </h5>
 
           <div className="d-flex align-items-center mb-2">
-            <div className="rating me-3">
+            <div className={`rating ${language === "en" ? "me-3" : "ms-3"}`}>
+
               {[...Array(5)].map((_, i) => (
-                <Star
+                
+                i < Math.floor(product.rating.rate) 
+                ? <StarFill
                   key={i}
-                  className={
-                    i < Math.floor(product.rating.rate)
-                      ? "text-warning"
-                      : "text-muted"
-                  }
-                />
+                  className={"text-warning"}
+                /> 
+                : <Star key={i} className={"book-description"} />
               ))}
             </div>
             <span>
@@ -185,7 +190,7 @@ export default function BookDetails({
           </div>
 
           <div className="reading-time mb-4 d-flex align-items-center">
-            <Clock className="me-2" />
+            <Clock className={`${language === "en" ? "me-2" : "ms-2"}`} />
             <span>
               {t("estimatedReadingTime")}: {readingTimeMinutes} {t("minutes")}
             </span>
@@ -193,7 +198,7 @@ export default function BookDetails({
 
           <div className="price-container mb-4">
             <h3 className="product-price">${product.price.toFixed(2)}</h3>
-            <span className="text-success ms-2">{t("inStock")}</span>
+            <span className={`text-success ${language === "en" ? "me-2" : "ms-2"}`}>{t("inStock")}</span>
           </div>
 
           <div className="book-description mb-4">{description}</div>
@@ -226,19 +231,23 @@ export default function BookDetails({
             </div>
 
             <Button
-              variant="primary"
+              variant={isInCartItems ? "primary" : "outline-primary" }
               className="px-4 d-flex align-items-center gap-2"
+              onMouseEnter={()=> setCartHovered(!isCartHovered)}
+              onMouseOut={()=> setCartHovered(!isCartHovered)}
               onClick={handleAddToCart}
             >
-              <Cart size={16} />
+              {isCartHovered ? <CartFill size={16} /> : <Cart size={16} />}
               {t("addToCart")}
             </Button>
             <Button
               variant={isInWishlist ? "danger" : "outline-danger"}
+              onMouseEnter={() => setWishListHovered(!isWishListHovered)}
+              onMouseOut={() => setWishListHovered(!isWishListHovered)}
               className="d-flex align-items-center gap-2"
               onClick={() => toggleWishlist(product.id)}
             >
-              {isInWishlist ? <HeartFill size={16} /> : <Heart size={16} />}
+              {isWishListHovered || isInWishlist ? <HeartFill size={16} /> : <Heart size={16} />}
               {isInWishlist ? t("removeFromWishlist") : t("addToWishlist")}
             </Button>
             <Button
@@ -283,7 +292,7 @@ export default function BookDetails({
               <div className="py-3">
                 <p>{t("customerReviews")}</p>
                 <div className="review-placeholder">
-                  <p className="text-muted">{t("noReviewsYet")}</p>
+                  <p className="book-description">{t("noReviewsYet")}</p>
                 </div>
               </div>
             </Tab>

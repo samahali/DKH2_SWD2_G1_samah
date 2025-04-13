@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, Row, Col, ProgressBar, Button } from "react-bootstrap";
 import { Eye } from "react-bootstrap-icons";
 import { useTranslation } from "../../context/TranslationContext";
+import "./ReadingList.css"
 
 export default function ReadingList({
   books,
@@ -63,7 +64,7 @@ export default function ReadingList({
                         </div>
                         <div className="d-flex">
                           <Button
-                            variant="outline-primary"
+                            variant="outline-secondary"
                             size="sm"
                             className="me-2"
                             onClick={() => viewBookDetails(book.id)}

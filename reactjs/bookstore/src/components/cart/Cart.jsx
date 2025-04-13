@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { Trash } from "react-bootstrap-icons";
 import { useTranslation } from "../../context/TranslationContext";
+import "./Cart.css"
 
 export default function Cart({ cartItems, removeFromCart, updateQuantity }) {
   const { language, t } = useTranslation();

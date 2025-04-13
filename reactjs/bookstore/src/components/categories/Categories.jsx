@@ -1,5 +1,6 @@
 import { Row, Col, Card } from "react-bootstrap";
 import { useTranslation } from "../../context/TranslationContext";
+import "./Categories.css"
 
 export default function Categories({ onCategorySelect, selectedCategory }) {
   const { t } = useTranslation();
